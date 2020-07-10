@@ -26,12 +26,12 @@ class FuncList{
 public:
     
     void func1(){
-         cout << "i am func1";
+         cout << "i am func1"<<endl;
     }
 
     void func2(int a){
-        cout << " i am func2" 
-             << "i has a pram"<<a<< endl;
+        cout << "i am func2" << endl
+        << "i has a pram" << a << endl;
     }
 
 };
@@ -42,5 +42,10 @@ void test1(){
     func f1(bind(FuncList::func1,&fList));
     func f2(bind(FuncList::func2,&fList, 2));
 
-    
+    f1.run();
+    f2.run();
 } 
+
+int main(){
+    test1();
+}
